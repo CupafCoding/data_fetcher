@@ -42,14 +42,27 @@ async function getFetch(url, type) {
 reqBtn.addEventListener("click", () => {
   if (urlInput.value) {
     getFetch(urlInput.value, "text")
-      .then((res) => {
-        if (res) {
+    .then((res) => {
+      if (res) {
           response.textContent = res;
+
+          header.style.background = "lime"
+          headerTitle.textContent = "Success";
+
+
         }
       })
       .catch((err) => {
+        header.style.background = "red"
+        headerTitle.textContent = "Error!!! Check a console";
+
         console.log(`Error of search function - ${err}`);
       });
+      header.style.top = "0px";
+
+      setTimeout(() => {
+        header.style.top = "-50px"
+      }, 5000);
   } else {
     console.log("Input is empty");
   }

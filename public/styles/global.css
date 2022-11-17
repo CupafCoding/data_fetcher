@@ -55,3 +55,17 @@ html, body {
 .response {
     width: 50%;
 }
+
+.header {
+    width: 100%;
+    height: max-content;
+    min-height: 50px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    transition: 300ms ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
