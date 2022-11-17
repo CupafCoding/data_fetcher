@@ -1,3 +1,3 @@
 # data_fetcher
 
-Libs: express, nodemon.
+Libs: express, nodemon, cors.
